@@ -5,12 +5,10 @@
     font-weigth: bold;
     color: #333;
 }
-#todo{
-    width: 991px;
-    margin:0 auto;
-    box-shadow: .4em .4em 1em gray;
-    font-family: LatoBlack
-    }
+.container {
+    
+}
+
 header{
     width:100%;
     height:170px;
@@ -19,15 +17,14 @@ header{
     font-size:20pt;
     text-align: center;
     }
-#banner{
-    width: 100%;
-    height: 170px;
-}
 
 #login{
     font-size: 17px;
 } 
-
+.bannerLibreria{
+    width: 45%;
+    height: 100px;
+}
 #mainNav a{
     font: "Tahoma" 14px bold;
     color:darkviolet;
@@ -262,6 +259,17 @@ td{
  text-decoration: none;
  cursor: pointer;
 
+}
+#linkLogin{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header,h4,.close{
+    background-color: #337dff;
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
 }
 /************************/
 /**Navgacion responsiva**/
