@@ -1,5 +1,5 @@
-<div >
-    <div id="carrusel" class="carousel slide" data-ride="carousel">
+<div> 
+<div id="carrusel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carrusel" data-slide-to="0" class="active"></li>
         <li data-target="#carrusel" data-slide-to="1" ></li>
@@ -29,4 +29,4 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
-  
+</div> 

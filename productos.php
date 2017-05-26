@@ -24,7 +24,9 @@
   <div id="modalRegistro" class="modal fade" role="dialog"></div>
   <div id="modalLogin" class="modal fade" role="dialog"></div>
 
-  <div id="carruse"></div>
+  <div id="ca2"> 
+
+ </div> 
  
 
   <div id="contenido"></div>
