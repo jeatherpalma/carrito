@@ -5,201 +5,38 @@
   	<title>Carrito</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">      
+    <link rel="stylesheet" type="text/css" href="css/estilosmediaquery.css">  
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+         
     <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/loadforms.js"></script>
-    <meta name="viewport" content="width=device-width.initial-scale=1.0"/>
+    <script type="text/javascript" src="js/pageMain.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">                  
+    
   </head>
-  <body class="modal-body">
+  <body >
 
-  <div class="container-fluid">
-     <div class="page-header">
-       <img class="bannerLibreria" src="img/bannerLibreria.jpg" alt="">
-     </div>
-  </div>
 
-  <div class="container-fluid">
-      
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-               </button>
-            
-          </div>
-          </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           <ul class="nav navbar-nav">
-             <li class="active">
-               <a href="#">Inicio<span class="sr-only">(current)</span></a>
-             </li>
-             <li><a href="productos.html">Productos</a></li>
-             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acerca de..<span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                 <li><a href="">Nostros</a></li>
-                 <li role="separator" class="divider"></li>
-                 <li><a href="">Contacto</a></li>
-                 <li><a href="">Localizanos</a></li>
-               </ul>
-             </li>
-           </ul>
+  <!--Barra de navegacion-->
+  <div id="barraNavegacion"></div>
+  <!--Formulario registro-->
+  <div id="modalRegistro" class="modal fade" role="dialog"></div>
+  <div id="modalLogin" class="modal fade" role="dialog"></div>
 
-          <ul class="nav navbar-nav navbar-right">
-              <li><a id="linkRegistrar" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a id="linkLogin" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          </ul> 
-
-         </div> 
-      </nav>
-  </div>
   
-     <div id="modalRegistro" class="modal fade" role="dialog"></div>
-     <div id="modalLogin" class="modal fade" role="dialog"></div>
+ 
 
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-                  <div class="row">
-                  <img class="col-md-12" src="img/categorias/literatura/cementerio.jpeg">
-                  <div class="col-md-12">El libro del cementerio</div>
-                  <div class="col-md-12">+</div>
-                  <div class="col-md-12">
-                    <div id="col-md-12">$200</div>
-                    <button class="col-md-12">
-                      <img class="col-md-12" src="img/059-cart.png"/>
-                    </button>
-                  </div>
-                  </div>
-          </div> 
-          <div class="col-xs-12 col-sm-6 col-md-4">
-                  <img class="images" src="img/categorias/literatura/cementerio.jpeg">
-                  <div class="nomProduct">El libro del cementerio</div>
-                  <div class="verMas">+</div>
-                  <div class="block">
-                    <div id="precioProduct">$200</div>
-                    <button class="carrito">
-                      <img class="imgCarrito" src="img/059-cart.png"/>
-                    </button>
-                  </div>
-          </div> 
-          <div class="col-xs-12 col-sm-6 col-md-4">
-                 <img class="images" src="img/categorias/literatura/cementerio.jpeg">
-                  <div class="nomProduct">El libro del cementerio</div>
-                  <div class="verMas">+</div>
-                  <div class="block">
-                    <div id="precioProduct">$200</div>
-                    <button class="carrito">
-                      <img class="imgCarrito" src="img/059-cart.png"/>
-                    </button>
-                  </div>
-        </div> 
-      </div>
-
-
-
-
-
-      <!--
-      <div id="productos">
-          <table id="tablaProductos">
-              <tr class="renglonProd">
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/cementerio.jpeg"/><br/></div>
-                  <div class="nomProduct">El libro del cementerio</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$200</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/dickenson.jpeg"/><br/></div>
-                  <div class="nomProduct">Emily Dickenson</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$50</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/index.jpeg"/><br/></div>
-                  <div class="nomProduct">El código Da vinci</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$150</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-              </tr>
-              
-              <tr class="renglonProd">
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/isla.jpeg"/><br/></div>
-                  <div class="nomProduct">La isla misteriosa</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$80</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/juegosHambre.jpeg"/><br/></div>
-                  <div class="nomProduct">LOs juegos del hambre</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$300</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/leguas.jpeg"/><br/></div>
-                  <div class="nomProduct">20 000 legua de viaje submarino</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$120</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-              </tr>
-              
-              <tr class="renglonProd">
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/montecristo.jpeg"/><br/></div>
-                  <div class="nomProduct">El conde de Montecristo</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$150</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/principito.jpeg"/><br/></div>
-                  <div class="nomProduct">El principito</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$30</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-                  
-                  <td class="colIzq">
-                  <div class="images" id="imgProduct"><img class="imgProduct "src="img/categorias/literatura/quijote.jpeg"/><br/></div>
-                  <div class="nomProduct">Don quijote de la mancha</div>
-                  <div class="verMas">+</div>
-                  <div class="block"><div id="precioProduct">$230</div>
-                      <button class="carrito"><img class="imgCarrito" src="img/059-cart.png"/></button></div>
-                  </td>
-              </tr>
-          </table>
-      </div>
+      <div id="contenido"></div>
+  
       
-    </main>  	
-  	<footer>
-     <span>Pie de pagina</span>
-     <nav id="foot"><a href="http://www.itdurango.edu.mx" target="_blank">Itdurango footer</a>
-        &nbsp;|&nbsp;
-        <a href="http://www.google.com.mx" target="_blank">Google footer</a>
-        &nbsp;|&nbsp;
-        <a href="http://www.wikipedia.com" target="_blank">Libros Web.es footer</a>
-        </nav> 
-    </footer>
-    </div> -->
-    <!--Agregar los script tal como están-->
+    
+
+
+     <footer>
+       <div id="piePagina"></div>
+     </footer>
+
+    
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   </body>

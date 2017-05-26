@@ -1,0 +1,62 @@
+#barraNavegacion nav ,#dropdown-menu{
+	background: #38393F;
+}
+#barraNavegacion nav div ul li a{
+	color: #fff;
+	cursor: pointer;
+}
+#barraNavegacion nav div ul li a:hover{
+	color: : #38393F;
+}
+#panelActividades{
+	width: 200px;
+	
+}
+
+#contenedorMain{
+	margin-right: 10px;
+}
+#headerAddnewUser{
+	background:#38393F; 
+}
+#panel-body{
+	background: #CED4F5;
+	color: #ffff;
+	height: 100%;
+}
+#panelActividades div ul li a{
+	color: #000;
+	cursor: pointer;
+}
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 979px) {
+
+}
+
+@media only screen and (max-width : 767px) {
+#panelActividades{
+	width: 100%;
+}
+}
+
+@media only screen and (max-width : 480px) {
+.page-header{
+	display: none;
+}
+
+#panelActividades{
+
+	display: none;
+}
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,98 @@
+
+.logotipo{
+	text-align: center;
+	margin-bottom: 50px;
+	display: block;
+
+}
+
+#categoria{
+	background: #C3C4CB;
+	border-radius: .19em;
+	color: #ffff;
+	height: 100%;
+}
+#categoria ul li a{
+	color: #000;
+	cursor: pointer;
+}
+#categoria h3{
+	background: gray;
+	color: #fff;
+}
+
+.navbar{
+	margin-bottom: 0px;
+    
+}
+
+#carrusel{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#imagenHeader{
+	width: 100px;
+	height: 100px;
+}
+.imagenSlide{
+	width: 100%;
+    height: auto;
+}
+.jumbotron{
+    background: #000;
+}
+.tituloRedes{
+    margin-bottom: 15px;
+}
+
+.imagenRedes{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+#panelActividades, .panel{
+	margin-right: 0px;
+}
+.list-group-item,a{
+	cursor: pointer;
+}
+.categoriasProductos{
+	margin-top: 100px;
+}
+
+#barraNavegacion{
+	margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 979px) {
+#logoFormulario{
+	height: 100%;
+	width: 100%;
+}
+}
+
+@media only screen and (max-width : 767px) {
+#logoFormulario{
+	height: 60%;
+	width: 60%;
+}
+}
+
+@media only screen and (max-width : 480px) {
+.page-header{
+	display: none;
+}
+#logoFormulario{
+	height: 40%;
+	width: 40%;
+}
+}
+
+@media only screen and (max-width : 320px) {
+
+}
