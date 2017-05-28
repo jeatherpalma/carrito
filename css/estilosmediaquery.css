@@ -61,8 +61,20 @@
 	margin-top: 30px;
 }
 
+.w3-card-4{
+width: 70%;
+}
 
-
+.w3-container{
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+#imagenCategoria{
+	margin-bottom: 10px;
+}
+#sideBar{
+	background: green;
+}
 @media only screen and (max-width : 1200px) {
 
 }

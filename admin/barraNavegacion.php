@@ -33,7 +33,7 @@
              <li class="dropdown">
                <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Editorial<span class="caret"></span></a>
                <ul class="dropdown-menu">
-                 <li><a class="agregarEdidorial">Agregar editorial</a></li>
+                 <li><a class="agregarEditorial">Agregar editorial</a></li>
                  <li role="separator" class="divider"></li>
                  <li><a href="">Editar editorial</a></li>
                </ul>

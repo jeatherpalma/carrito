@@ -9,6 +9,7 @@
 	$autor = $_POST['autores'];
 	$costo = $_POST['costo'];
 	$paginas = $_POST['paginas'];
+    $editorial = $_POST['editorial'];
 	
 	
 	$coneccion = ftp_connect($host) or die("Cannot ogin");
@@ -46,20 +47,38 @@
     $sql = "SELECT idlibro FROM libro where nombre = '$nameBokk'";
     $result = $conn->query($sql);
     if($result->num_rows>0){
-        while ($row=$resultado->fetch_assoc()) {
+        while ($row=$result->fetch_assoc()) {
           $idbook = $row['idlibro'];
         }
     }
 
-    $sql = "SELECT idCategoria FROM categorias where Tipo = 'strtolower($categoria)'";
+    $sql = "SELECT idCategoria FROM categorias where Tipo = '$categoria'";
     $result = $conn->query($sql);
     if($result->num_rows>0){
-        while ($row=$resultado->fetch_assoc()) {
+        while ($row=$result->fetch_assoc()) {
           $idCategoria = $row['idCategoria'];
         }
     }
 
-    $sql2 = "INSERT INTO lcae (idlibro, idcategoria, idautor, ideditorial) VALUES"
+    $sql = "SELECT ideditorial FROM editorial where nombre = '$editorial'";
+    $result = $conn->query($sql);
+    if($result->num_rows>0){
+        while ($row=$result->fetch_assoc()) {
+          $ideditorial = $row['ideditorial'];
+        }
+    }
 
+    $sql = "SELECT idautor FROM autor where nombre = '$autor'";
+    $result = $conn->query($sql);
+    if($result->num_rows>0){
+        while ($row=$result->fetch_assoc()) {
+          $idAutor = $row['idautor'];
+        }
+    }
+
+   
+
+    $sql2 = "INSERT INTO lcae (idlibro, idcategoria, idautor, ideditorial) VALUES ('$idbook','$idCategoria','$idAutor','$ideditorial')";
+    $result = $conn->query($sql2);
     $conn->close();
  ?>

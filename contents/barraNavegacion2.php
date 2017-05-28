@@ -1,5 +1,5 @@
 <script type="text/javascript" src="js/formularios.js"></script>
- <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+ <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="container-fluid">
             <div class="navbar-header">
@@ -20,21 +20,7 @@
              </li>
 
         
-             <li class="dropdown">
-               <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                 <li><a href="productos.php">Ciencia</a></li>
-                 <li role="separator" class="divider"></li>
-                 <li><a href="">Literatura</a></li>
-                  <li role="separator" class="divider"></li>
-                 <li><a href="">Poesia</a></li>
-                  <li role="separator" class="divider"></li>
-                 <li><a href="">Policiaco</a></li>
-                  <li role="separator" class="divider"></li>
-                 <li><a href="">Terror</a></li>
-               </ul>
-             </li>
-
+             <li><a href="productos.php">Libros </a></li>
                 
 					 
                 <li  ><a href="" role="tab" data-toggle="tab">Acerca de</a></li>  		
