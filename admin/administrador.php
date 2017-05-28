@@ -21,7 +21,7 @@
     <div class="list-group">
       <a class="agregarAutor list-group-item">Autor</a>
       <a class="agregarCategoria list-group-item">Categoria</a>
-      <a class="list-group-item">Editorial</a>
+      <a class="agregarEditorial list-group-item">Editorial</a>
       <a class="addBook list-group-item">Libros</a>
       
     </div>

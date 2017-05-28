@@ -33,9 +33,18 @@
              <li class="dropdown">
                <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Editorial<span class="caret"></span></a>
                <ul class="dropdown-menu">
-                 <li><a class="agregarCategoria">Agregar editorial</a></li>
+                 <li><a class="agregarEdidorial">Agregar editorial</a></li>
                  <li role="separator" class="divider"></li>
                  <li><a href="">Editar editorial</a></li>
+               </ul>
+             </li>
+
+             <li class="dropdown">
+               <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categoria<span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                 <li><a class="agregarCategoria">Agregar Categoria</a></li>
+                 <li role="separator" class="divider"></li>
+                 <li><a href="">Editar categoria</a></li>
                </ul>
              </li>
 

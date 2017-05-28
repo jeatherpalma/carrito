@@ -13,6 +13,11 @@ $(document).ready(function() {
        
 	});
 
+	$(".agregarEditorial").click(function(){
+		$("#addAutor").load("http://localhost/carrito/admin/addEditorial.php");
+       
+	});
+
 	$("#barraNavegacionAdmin").on("click", "a.addBook", function(){
         $("#addAutor").load("http://localhost/carrito/admin/addNewBook.php");
 	});
@@ -24,4 +29,9 @@ $(document).ready(function() {
 	$("#barraNavegacionAdmin").on("click", "a.agregarAutor", function(){
 		$("#addAutor").load("http://localhost/carrito/admin/addAutor.php");
 	});
+
+	$("#barraNavegacionAdmin").on("click", "a.agregarEditorial", function(){
+		$("#addAutor").load("http://localhost/carrito/admin/addEditorial.php");
+	});
+
 });
