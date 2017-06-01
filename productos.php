@@ -26,10 +26,12 @@
   <div id="modalRegistro" class="modal fade" role="dialog"></div>
   <div id="modalLogin" class="modal fade" role="dialog"></div>
 
+ <div id="showCategory">
+   <button class="btn btn-primary">Categorias</button>
+ </div>
  
- 
-
-       <div id="contenido"></div>
+ <!--Contenido de los libros-->
+  <div id="contenido"></div>
   
 
  

@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/formularios.js"></script>
+
  <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="container-fluid">
@@ -19,11 +19,34 @@
                <a href="index.php">Inicio</a>
              </li>
 
-        
-             <li><a href="productos.php">Libros </a></li>
-                
-					 
-                <li  ><a href="" role="tab" data-toggle="tab">Acerca de</a></li>  		
+
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Libros
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <?php 
+
+  
+                       require_once '../loginDatabase.php';
+                       $sql = "SELECT Tipo FROM categorias";
+                       $resultado = $conn->query($sql);
+                       if($resultado->num_rows>0){
+                        while ($row=$resultado->fetch_assoc()) {
+                         
+                  ?>  
+                          
+                        <li><a  class="categorias"><?php echo utf8_encode($row['Tipo']); ?></a></li>
+                        
+                      
+                <?php
+                         }
+                       }
+
+                ?>
+                                  
+                </ul>
+            </li> 
+            <li  ><a href="" role="tab" data-toggle="tab">Acerca de</a></li>  		
                     
 			</ul>
 		

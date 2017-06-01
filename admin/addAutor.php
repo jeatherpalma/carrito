@@ -21,15 +21,6 @@
 
     	</div>
 
-    	<div class="form-group row">
-  
-    		<div class="col-xs-12 col-sm-6 col-md-3">
-    			<label class="control-label">Nacionalidad del autor</label>
-    			<input type="text" placeholder="Nacionalidad" name="nacionalidad" class="form-control"/>
-    		</div>
-
-    	</div>
-
 
     	<div class="form-group row">
     			
