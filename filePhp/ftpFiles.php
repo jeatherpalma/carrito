@@ -16,7 +16,7 @@
 	$login = ftp_login($coneccion,$user,$pass);
 	
     if((!$coneccion) && (!$login)){
-    	echo "Error de conección";
+    	echo ('error');
     }else{
     	$temp = explode(".",$_FILES['image']['name']);
     	$sources_file = $_FILES['image']['tmp_name'];
@@ -27,9 +27,9 @@
     	$subido = ftp_put($coneccion,$destino."/".$nombre,$sources_file,FTP_BINARY);
 
     	if($subido){
-    		echo "File uploaded";
+    		echo ('success');
     	}else{
-    		echo "File uploaded failed;";
+    		echo ('error');
     	}
     }
 
@@ -41,6 +41,7 @@
     VALUES('$nameBokk','$descripcion','$costo','$paginas','2001-3-4','$url')";
     $result = $conn->query($sql);
     if(!$result){
+        echo ('error');
     	die($conn->error);
     }
 
@@ -80,5 +81,10 @@
 
     $sql2 = "INSERT INTO lcae (idlibro, idcategoria, idautor, ideditorial) VALUES ('$idbook','$idCategoria','$idAutor','$ideditorial')";
     $result = $conn->query($sql2);
+    if($result){
+        echo ('success');
+   }else{
+      echo ('error');
+   }
     $conn->close();
  ?>

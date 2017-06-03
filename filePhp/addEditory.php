@@ -1,11 +1,11 @@
 <?php 
 
   require_once '../loginDatabase.php';
-   $tipo = utf8_encode($_POST['tipo']);
+   $nombre = utf8_encode($_POST['nombre']);
 
 
    
-   $sql = "INSERT INTO categorias(Tipo) VALUES('$tipo')";
+   $sql = "INSERT INTO editorial(nombre) VALUES('$nombre')";
 
    $resultado = $conn->query($sql);
    if($resultado){
@@ -15,6 +15,5 @@
    }
    	
     $conn->close();
-
 
  ?>

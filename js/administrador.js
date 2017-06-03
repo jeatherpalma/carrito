@@ -81,8 +81,107 @@ $(document).ready(function() {
 	        x.previousElementSibling.className.replace(" w3-green", "");
 	    }
 	});
+    
+    //Variable para el modal 
+    var modal = false;
+	$("#addAutor").on("click", "#addCategory", function(){
+		var tipo = $("#tipoCategoria").val();
+        var parametros = {
+        	"tipo" : tipo
+        };
 
+        ejecutaArchivo(parametros,"http://localhost/carrito/filePhp/addCategory.php");
+        if(modal){
+        	var actividad2 = "Agregar categoria";
+			document.getElementById("tipoCategoria").value = "";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
+        	modal = false;
+        }else{
+        	var actividad2 = "Agregar categoria";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalerrorAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
 
+        }
+		
+
+	});
+
+	$("#addAutor").on("click", "#addEditorial", function(){
+		var nombre = $("#nombreEditorial").val();
+        var parametros = {
+        	"nombre" : nombre
+        };
+
+        ejecutaArchivo(parametros,"http://localhost/carrito/filePhp/addEditory.php");
+        if(modal){
+        	var actividad2 = "Agregar editorial";
+			document.getElementById("nombreEditorial").value = "";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
+        	modal = false;
+        }else{
+        	var actividad2 = "Agregar editorial";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalerrorAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
+
+        }
+		
+
+	});
+
+	$("#addAutor").on("click", "#addAutor", function(){
+		var nombre = $("#nombreAutor").val();
+		var apellido = $("#apellido").val();
+        var parametros = {
+        	"nombre" : nombre,
+        	"apellido": apellido
+        };
+
+        ejecutaArchivo(parametros,"http://localhost/carrito/filePhp/registerNewAutor.php");
+        if(modal){
+        	var actividad2 = "Agregar autor";
+			document.getElementById("nombreAutor").value = "";
+			document.getElementById("apellido").value = "";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
+        	modal = false;
+        }else{
+        	var actividad2 = "Agregar autor";
+        	$( "#modalAdministrador" ).load( "http://localhost/carrito/admin/modalerrorAdministrador.php",{'actividad':actividad2});
+        	$("#modalAdministrador").modal();
+
+        }
+		
+
+	});
+
+	
+
+	
+
+	function ejecutaArchivo (parametros,urlFile) {
+		$.ajax({
+        	data : parametros,
+        	url: urlFile,
+        	type: 'POST',
+        	async: false,
+        	ajaxSend : function(data){
+        		 
+        	},
+        	success: function(data){
+        		
+        		if(data == 'success'){
+        		 	modal = true;	
+        		}
+        		
+        	},
+        	error : function(data){
+        		
+        	}
+        	
+        });
+	}
 	
 
 });

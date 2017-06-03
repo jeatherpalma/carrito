@@ -75,6 +75,22 @@ width: 70%;
 #sideBar{
 	background: green;
 }
+
+#headerModalAdmin{
+	background: #00b005;
+	color: #fff;
+
+}
+#headerModalErrorAdmin{
+	color: #fff;
+	background: #df2900;
+}
+.modal-dialog .modal-content .modal-header .close{
+	color: #fff; 
+} 
+#headerAddnewUser{
+	color: #fff;
+}
 @media only screen and (max-width : 1200px) {
 
 }

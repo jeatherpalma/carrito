@@ -9,10 +9,11 @@
 
    $resultado = $conn->query($sql);
    if($resultado){
-
+		echo ('success');
    }else{
-   	
+   	  echo ('error');
    }
-
+   	
+    $conn->close();
 
  ?>

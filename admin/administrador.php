@@ -70,6 +70,15 @@
 </div>
 
 
+	<!-- Modal -->
+  <div class="modal fade" id="modalAdministrador" role="dialog">
+    
+    </div>
+
+
+
+
+
   
 
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
