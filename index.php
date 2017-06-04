@@ -13,7 +13,7 @@
   </head>
 
   <body>
-
+ <div id="carritoCompras"></div>
  <div id="barraNavegacion"></div>
    
   <div id="modalRegistro" class="modal fade" role="dialog"></div>

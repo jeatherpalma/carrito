@@ -26,7 +26,13 @@
                 <ul class="dropdown-menu">
                 <?php 
 
-  
+                        session_start();
+                        if(isset($_SESSION['carrito'])){
+                          $numProductos = count($_SESSION['carrito']);
+                        
+                        }else{
+                          $numProductos = 0;
+                        }
                        require_once '../loginDatabase.php';
                        $sql = "SELECT Tipo FROM categorias";
                        $resultado = $conn->query($sql);
@@ -51,23 +57,29 @@
 			</ul>
 		
         <ul class="nav navbar-nav navbar-right">
-        
-        <form class="navbar-form navbar-left" role="search">
-                <div class="form-group row">
-                <div class="col-md-3">
-                  <input type="text" class="form-control" placeholder="Search">  
-                </div>
-                  
-                </div>
-                <button type="submit" class="btn btn-success">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-        </form>
-        	<li class="dropdown">
-            
-        		<li><a id="linkRegistrar" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a id="linkLogin" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        	</li>
+          
+          <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group row">
+                  <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Search">  
+                  </div>
+                    
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+          </form>
+          	<li class="dropdown">
+              
+          		<li><a id="linkRegistrar" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a id="linkLogin" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          	</li>
+            <li class="dropdown">
+            <button id="verCarrito" class="btn btn-warning">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                <span><?php echo $numProductos; ?></span>
+          </button>
+          </li>
         </ul>
 
 		</div>
