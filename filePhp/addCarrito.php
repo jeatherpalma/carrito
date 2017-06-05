@@ -5,7 +5,7 @@
 	$cantidad = $_POST['cantidad'];
 	if(isset($_SESSION['carrito'])){
 		if($idlibro){
-			$arreglo = $_SESSION['carrito'];
+		$arreglo = $_SESSION['carrito'];
 		$posicion = 0;
 		$encontrado = false;
 
@@ -32,6 +32,7 @@
        				$nombre = $row['nombre'];
        				$precio = $row['costo'];
        				$imagen = $row['imagen'];
+       				echo $nombre," " ,$precio," ",$imagen;
        			}
        		}
 
@@ -44,7 +45,7 @@
        				'Cantidad' =>$cantidad
        				);
 
-       			array_push($arreglo,$arregloDatosNuevos);
+       			$arreglo = array_merge($arreglo,$arregloDatosNuevos);
        			$_SESSION['carrito']=$arreglo;
 		}
 		}

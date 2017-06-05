@@ -69,17 +69,39 @@
                       <span class="glyphicon glyphicon-search"></span>
                   </button>
           </form>
-          	<li class="dropdown">
+          	 <?php  
+              if(isset($_COOKIE["usuario"])){
+                ?>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $_COOKIE['usuario'];?>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a id="cerrarSecion">Cerrar seción</a></li>
+                    </ul>
+                  </li>  
               
-          		<li><a id="linkRegistrar" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a id="linkLogin" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          	</li>
-            <li class="dropdown">
-            <button id="verCarrito" class="btn btn-warning">
-                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                <span><?php echo $numProductos; ?></span>
-          </button>
-          </li>
+                <?php
+              }else{
+                ?>
+                  <li class="dropdown">
+                    <li><a id="linkRegistrar" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a id="linkLogin" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </li>
+                <?php   
+              }
+
+                ?>
+
+             
+             
+             
+             <li class="dropdown">
+                <a id="verCarrito" class="btn btn-warning">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                  <span><?php echo $numProductos; ?></span>
+                </a>
+            </li>
+  
         </ul>
 
 		</div>

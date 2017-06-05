@@ -32,7 +32,7 @@
 					  <h2 class="name" ><?php echo utf8_encode($row['nombre']); ?></h2>
 
 						  <div class="w3-card-4">
-						    <img class="imgCat" src="<?php echo $row['imagen']; ?>" alt="Norway" style="width:100%">
+						    <img class="imgCat" src="<?php echo $row['imagen']; ?>" style="width:100%">
 						    <div class="w3-container">
 						    	<div class="row">
 						    		<div class="col-md-4 ">

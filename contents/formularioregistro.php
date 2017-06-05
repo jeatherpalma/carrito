@@ -54,7 +54,7 @@
       </div>
       </div>
       <div class="modal-footer">
-        <button id="closeFormularioRegistro" type="button" class="btn btn-default" >Close</button>
+        
       </div>
     </div>
 

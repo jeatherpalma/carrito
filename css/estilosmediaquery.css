@@ -91,6 +91,14 @@ width: 70%;
 #headerAddnewUser{
 	color: #fff;
 }
+.imagenCarrito{
+	width: 50px;
+	height: 50px;
+}
+#tablaCarrito{
+	margin-top: 20px;
+}
+
 @media only screen and (max-width : 1200px) {
 
 }
