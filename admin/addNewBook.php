@@ -38,57 +38,15 @@
                         
                         </select>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <label for="autores">Autor</label>
-                            <select name="autores" id="sel2" class="form-control">
-                              <?php  
-                                    require_once '../loginDatabase.php';
-                                    $sql = "SELECT nombre,Apellido FROM autor";
-                                    $resultado = $conn->query($sql);
-                                    if($resultado->num_rows>0){
-                                        while ($row=$resultado->fetch_assoc()) {
-                                            ?>
-                                            <option><?php echo utf8_encode($row['nombre'])." "/*.utf8_encode($row['Apellido'])*/;?></option>
-                                            <?php
-                                        }
-                                        
-                                    }
-
-                                ?>  
-                            </select>
-                        
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <label for="editorial">Editorial</label>
-                            <select name="editorial" id="sel3" class="form-control">
-                              <?php  
-                                    require_once '../loginDatabase.php';
-                                    $sql = "SELECT nombre FROM editorial";
-                                    $resultado = $conn->query($sql);
-                                    if($resultado->num_rows>0){
-                                        while ($row=$resultado->fetch_assoc()) {
-                                            ?>
-                                            <option><?php echo utf8_encode($row['nombre']);?></option>
-                                            <?php
-                                        }
-                                        
-                                    }
-
-                                ?>  
-                            </select>
-                        
-                    </div>
+                    
                 </div> 
 
                 <div class="form-group row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="col-xs-12 col-sm-8 col-md-6">
                         <label class="control-label">Costo</label>
                         <input type="text" placeholder="$ 0.00" name="costo" class="form-control"/>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <label class="control-label">Número de páginas</label>
-                        <input type="text" placeholder="0" name="paginas" class="form-control"/>
-                    </div>
+                   
                 </div> 
 
                 <div class="form-group row">
