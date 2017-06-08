@@ -1,6 +1,6 @@
 <?php  
 	session_start();
-	require_once '../loginDatabase.php';
+	require_once 'loginDatabase.php';
 	$idlibro = $_POST['idlibro'];
 	$cantidad = $_POST['cantidad'];
 	if(isset($_SESSION['carrito'])){

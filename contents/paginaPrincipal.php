@@ -11,11 +11,11 @@
         <img src="img/slide2.jpg" alt="" class="imagenSlide">      </div>
 
       <div class="item">
-        <img src="img/slide2.jpg" alt="" class="imagenSlide">
+        <img src="img/slide1.png" alt="" class="imagenSlide">
       </div>
 
       <div class="item">
-        <img src="img/slide2.jpg" alt="" class="imagenSlide">
+        <img src="img/slide3.png" alt="" class="imagenSlide">
       </div>
 
     </div>
@@ -40,9 +40,9 @@
           <div >
               <div id="carrusel2" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carrusel" data-slide-to="0" class="active"></li>
-              <li data-target="#carrusel" data-slide-to="1" ></li>
-              <li data-target="#carrusel" data-slide-to="2" ></li>
+              <li data-target="#carrusel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carrusel2" data-slide-to="1" ></li>
+              <li data-target="#carrusel2" data-slide-to="2" ></li>
             </ol>
           
             <div class="carousel-inner">
@@ -69,9 +69,9 @@
            <div >
               <div id="carrusel3" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carrusel" data-slide-to="0" class="active"></li>
-              <li data-target="#carrusel" data-slide-to="1" ></li>
-              <li data-target="#carrusel" data-slide-to="2" ></li>
+              <li data-target="#carrusel3" data-slide-to="0" class="active"></li>
+              <li data-target="#carrusel3" data-slide-to="1" ></li>
+              <li data-target="#carrusel3" data-slide-to="2" ></li>
             </ol>
           
             <div class="carousel-inner">
@@ -91,15 +91,6 @@
           </div>
 
        </div>  
-          <h3>Los más comprados</h3>    
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-           <p>Some text..</p>
-          </div>
-          <div class="well">
-           <p>Some text..</p>
-          </div>
         </div>
       </div>
-    </div><br>
+    </div>

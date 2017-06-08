@@ -10,23 +10,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                </button>
-            
+             <a href = "index.php"   class="navbar-brand">Books Mex</a>
           </div>
           </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav" id="enlaces">
-             <li >
-               <a href="index.php">Inicio</a>
-             </li>
-
-        
+          
              <li class="dropdown">
                <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autor<span class="caret"></span></a>
                <ul class="dropdown-menu">
                  <li><a  class="agregarAutor">Agregar Autor</a></li>
                  <li role="separator" class="divider"></li>
                  <li><a href="">Editar Autor</a></li>
+                 <li role="separator" class="divider"></li>
+                 <li><a class="eliminarAutor">Eliminar Autor</a></li>
                </ul>
              </li>
 

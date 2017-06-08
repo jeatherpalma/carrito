@@ -2,7 +2,7 @@
 	$host='files.000webhost.com';
 	$user='booksmex';
 	$pass='loweronedzr1';
-	require_once '../loginDatabase.php';
+	require_once 'loginDatabase.php';
 	$nameBokk = $_POST['name'];
 	$descripcion = $_POST['descripcion'];
 	$categoria = $_POST['categoria'];

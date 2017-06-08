@@ -1,5 +1,5 @@
 <?php 
-   require_once '../loginDatabase.php';
+   require_once 'loginDatabase.php';
    $nombre = $_POST['nombre'];
    $apellido = $_POST['apellido'];
    

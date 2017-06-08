@@ -49,9 +49,17 @@ $(document).ready(function() {
 		var urlFile = "http://localhost/carrito/filePhp/addCarrito.php";
 		addCarrito(parametros,urlFile);
 		$("#barraNavegacion").load("http://localhost/carrito/contents/barraNavegacion2.php");
+		var actividad = "Agregar carrito";
+		var urlimagen = $(".imgCat").attr('src')
+        $( "#modalRegistro" ).load( "http://localhost/carrito/contents/modalAlert.php",{'actividad':actividad,'imagen':urlimagen});
+        $("#modalRegistro").modal()
 
 		
 	});
+	$("#modalRegistro").on("click","#verCarrito",function(){
+		$("#modalRegistro").modal('hide')
+		$("#contenidoPrincipal").load("http://localhost/carrito/contents/verCarrito.php")
+	})
 	//Variable detecta login correcto
 	var login = false;
 	//Metodo para el login del usuario
@@ -74,6 +82,56 @@ $(document).ready(function() {
 			
 		}
 	});
+
+	//Metodo para el registro del usuario
+	//Metodo para el registro del usuario
+	$("#modalRegistro").on("click","#registroUser",function(){
+		//Variable para el estado del registro
+		login = false
+		//Datos del usuario
+		var user = $("#usuario").val()
+		var pass = $("#contrasena").val()
+		var pass2 = $("#contrasena2").val()
+		var nombre = $("#nombre").val()
+		var apellidos = $("#apellidos").val()
+		var telefono = $("#telefono").val()
+		//Se crea el arreglo para mandarlo por post
+		var parametros={
+			'usuario':user,
+			'contrasena':pass,
+			'nombre':nombre,
+			'apellidos':apellidos,
+			'telefono':telefono
+		};
+
+
+		
+		
+		//URL del archivo que e va a ejecutar
+		var url = "http://localhost/carrito/filePhp/registerUser.php";
+		if(pass==pass2){
+			//Ejecutamos el archivo
+			addCarrito(parametros,url);
+			//comprobamos el estado del login
+			if(login){
+				var actividad = "Registro";
+        		$( "#modalRegistro" ).load( "http://localhost/carrito/contents/modalAlert.php",{'actividad':actividad});
+			}else{
+				document.getElementById("contrasena").value = "";
+				document.getElementById("contrasena2").value = "";
+				document.getElementById("nombre").value = "";
+				document.getElementById("usuario").value = "";
+				document.getElementById("apellidos").value = "";
+				document.getElementById("telefono").value = "";
+				$("#etiquetaError").html("Error de registro checa tus campos").css("color", "red");
+			}
+		}else{
+				document.getElementById("contrasena").value = "";
+				document.getElementById("contrasena2").value = "";
+				$("#etiquetaError").html("*Las contraeñas no coinciden").css("color", "red");
+		}
+		
+	})
 
 	//Cerrar seción
 	$("#barraNavegacion").on("click","#cerrarSecion",function(){

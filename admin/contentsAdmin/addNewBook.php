@@ -21,7 +21,7 @@
                         <label for="sel1">Categorias</label>
                         <select name="categoria" class="form-control" id="sel1">
                         <?php  
-                            require_once '../loginDatabase.php';
+                            require_once '../../filePhp/loginDatabase.php';
                             $sql = "SELECT Tipo FROM categorias";
                             $resultado = $conn->query($sql);
                             if($resultado->num_rows>0){

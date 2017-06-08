@@ -1,6 +1,6 @@
 <?php 
 
-  require_once '../loginDatabase.php';
+  require_once 'loginDatabase.php';
    $nombre = utf8_encode($_POST['nombre']);
 
 

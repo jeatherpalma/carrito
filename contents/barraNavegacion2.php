@@ -1,5 +1,5 @@
 
- <nav class="navbar navbar-inverse" role="navigation">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="container-fluid">
             <div class="navbar-header">
@@ -9,6 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                </button>
+               <a href = "index.php"   class="navbar-brand">Books Mex</a>
             
           </div>
           </div>
@@ -33,7 +34,7 @@
                         }else{
                           $numProductos = 0;
                         }
-                       require_once '../loginDatabase.php';
+                       require_once '../filePhp//loginDatabase.php';
                        $sql = "SELECT Tipo FROM categorias";
                        $resultado = $conn->query($sql);
                        if($resultado->num_rows>0){

@@ -1,6 +1,6 @@
 <?php 
 
-  require_once '../loginDatabase.php';
+  require_once 'loginDatabase.php';
    $tipo = utf8_encode($_POST['tipo']);
 
 

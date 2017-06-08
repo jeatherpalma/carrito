@@ -1,23 +1,26 @@
 <?php  
-  require_once '../loginDatabase.php';
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  session_start();
+  require_once 'loginDatabase.php';
+  $user = $_POST['usuario'];
+  $pass = $_POST['password'];
 
-  $sql = "SELECT * FROM administrador WHERE usuario = '$username' and password = '$password' ";
-  $resultado = $conn->query($sql);
+  if($user){
+  if($pass){
 
-  if($resultado){
-  	if($resultado->num_rows > 0){
-  		header("Location:http://localhost/carrito/admin/administrador.php");
-  	}else{
-  		header("Location:http://localhost/carrito/admin/index.php?message=Usuario o contraseña no valido");
-  	}
-
-  	
-  }else{
-  
+     $sql="SELECT * FROM administrador WHERE usuario='$user' and password='$pass'";
+     $resultado = $conn->query($sql);
+         if($resultado->num_rows>0){
+            while ($row=$resultado->fetch_assoc()) {
+          $_SESSION['usuario']=$user;
+              echo ('success');
+            }
+         }else{
+          //agregar aquí si el login no es correcto
+          echo ('error');
+         }
+        
+        $conn->close();
+    }
   }
-
-
 
 ?>
