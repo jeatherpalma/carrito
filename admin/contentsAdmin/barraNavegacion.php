@@ -22,8 +22,6 @@
                <ul class="dropdown-menu">
                  <li><a  class="agregarAutor">Agregar Autor</a></li>
                  <li role="separator" class="divider"></li>
-                 <li><a href="">Editar Autor</a></li>
-                 <li role="separator" class="divider"></li>
                  <li><a class="eliminarAutor">Eliminar Autor</a></li>
                </ul>
              </li>
@@ -33,7 +31,7 @@
                <ul class="dropdown-menu">
                  <li><a class="agregarEditorial">Agregar editorial</a></li>
                  <li role="separator" class="divider"></li>
-                 <li><a href="">Editar editorial</a></li>
+                 <li><a class="eliminarEditorial">Editar editorial</a></li>
                </ul>
              </li>
 
@@ -42,7 +40,7 @@
                <ul class="dropdown-menu">
                  <li><a class="agregarCategoria">Agregar Categoria</a></li>
                  <li role="separator" class="divider"></li>
-                 <li><a href="">Editar categoria</a></li>
+                 <li><a class="editarCategoria">Editar categoria</a></li>
                </ul>
              </li>
 
@@ -50,10 +48,6 @@
                <a href="productos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Libros<span class="caret"></span></a>
                <ul class="dropdown-menu">
                  <li><a class="addBook">Agregar libro</a></li>
-                 <li role="separator" class="divider"></li>
-                 <li><a>Editar libro</a></li>
-                 <li role="separator" class="divider"></li>
-                 <li><a >Eliminar libro</a></li>
                </ul>
              </li>
 
@@ -62,7 +56,7 @@
       </ul>
     
         <ul class="nav navbar-nav navbar-right">
-        
+            <li><a  class="logout">Cerrar secion</a></li>
         </ul>
 
     </div>

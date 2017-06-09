@@ -2,7 +2,7 @@
 $usuario=utf8_encode($_POST['us']);
 $pss=utf8_encode($_POST['pss']);
 
-require_once '../loginDatabase.php';
+require_once 'loginDatabase.php';
 
  if($usuario){
  	if($pss){

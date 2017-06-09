@@ -15,7 +15,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-6">
             <?php
-            require_once '../loginDatabase.php';
+            require_once '../filePhp/loginDatabase.php';
             $sql ="SELECT l.nombre,l.imagen,l.costo,l.paginas,l.descripcion,l.idlibro,c.Tipo FROM libro l,lcae s, categorias c WHERE s.idcategoria = c.idCategoria AND 
              l.idlibro = s.idlibro AND l.idlibro = '$id'";  
               $resultado = $conn->query($sql);
@@ -23,7 +23,7 @@
                 while ($row=$resultado->fetch_assoc()) {
                   ?>
                 <div class="col-md-6">
-                  <img  id="imagenDescripcion" class="img-responsive img-thumbnail" src="<?php echo $row['imagen'];?>" />
+                  <img  id="imagenDescripcion" src="<?php echo $row['imagen'];?>" />
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-6">
                   <div>

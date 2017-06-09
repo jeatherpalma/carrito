@@ -80,10 +80,18 @@
 				</div>
 				</tr>
 			</div>
-		</tfoot>
+		
 		</tbody>
+
 		
   </table>
+  <div class="row">
+					<div class="container">
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-offset-9">
+							<button id="Pagar" class="btn btn-primary">Pagar</button>
+						</div>
+					</div>
+	</div>
 			<?php	
 	}else{
 		?>
@@ -97,5 +105,5 @@
 	
 ?>
 		
-				
+			
 </div>

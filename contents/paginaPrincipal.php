@@ -33,64 +33,18 @@
 
 
 
-      <div class="container text-center">    
-        <h3>Contamos con</h3><br>
-        <div class="row">
-          <div class="col-sm-4">
-          <div >
-              <div id="carrusel2" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carrusel2" data-slide-to="0" class="active"></li>
-              <li data-target="#carrusel2" data-slide-to="1" ></li>
-              <li data-target="#carrusel2" data-slide-to="2" ></li>
-            </ol>
-          
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">      </div>
-
-              <div class="item">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">
-              </div>
-
-              <div class="item">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">
-              </div>
-
-            </div>
-
-          </div>
-
-       </div>  
-          
-          <h3>Promiciones -50%</h3>
-        </div>
-        <div class="col-sm-4"> 
-           <div >
-              <div id="carrusel3" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carrusel3" data-slide-to="0" class="active"></li>
-              <li data-target="#carrusel3" data-slide-to="1" ></li>
-              <li data-target="#carrusel3" data-slide-to="2" ></li>
-            </ol>
-          
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">      </div>
-
-              <div class="item">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">
-              </div>
-
-              <div class="item">
-                <img src="https://placehold.it/150x80?text=IMAGE" alt="" class="imagenSlide img-responsive">
-              </div>
-
-            </div>
-
-          </div>
-
-       </div>  
-        </div>
+<div class="container-fluid text-center bg-grey">
+  <div class="row text-center">
+    <div class=" col-lg-offset-2 col-sm-4">
+      <div class="thumbnail">
+        <p><strong>Conoce nuestras promociones</strong></p>
+        <img id="promociones" src="img/promos1.jpg" alt="Promociones">
       </div>
     </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      <p><strong>Checa nuestros nuevos libros</strong></p>
+        <img id="nuevosLibros" src="img/booknew.jpg" alt="New York">
+      </div>
+    </div>
+</div>

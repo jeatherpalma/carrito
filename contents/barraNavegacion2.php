@@ -1,5 +1,5 @@
 
- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+ <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="container-fluid">
             <div class="navbar-header">
@@ -53,23 +53,23 @@
                                   
                 </ul>
             </li> 
-            <li  ><a href="" role="tab" data-toggle="tab">Acerca de</a></li>  		
+            <li  ><a id="acercade" role="tab" data-toggle="tab">Acerca de</a></li>  		
                     
 			</ul>
 		
         <ul class="nav navbar-nav navbar-right">
           
-          <form class="navbar-form navbar-left" role="search">
+          <div class="navbar-form navbar-left" role="search">
                   <div class="form-group row">
                   <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Search">  
+                    <input id="busquedaLibro" type="text" class="form-control" placeholder="Search">  
                   </div>
                     
                   </div>
-                  <button type="submit" class="btn btn-success">
+                  <button id="searchBook" class="btn btn-success">
                       <span class="glyphicon glyphicon-search"></span>
                   </button>
-          </form>
+          </div>
           	 <?php  
               if(isset($_COOKIE["usuario"])){
                 ?>

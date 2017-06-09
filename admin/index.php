@@ -41,7 +41,7 @@ session_start();
 	  	</button>
 	  	<div id="demoAcc2" class="w3-hide w3-white w3-card-2">
 	  	  <div class="agregarCategoria w3-bar-item w3-button">Agregar Categoria <span class="glyphicon glyphicon glyphicon-plus"></span></div>
-	      <div href="#" class="w3-bar-item w3-button">Eliminar Categoria<span class="glyphicon glyphicon glyphicon-remove"></div>
+	      <div class="editarCategoria w3-bar-item w3-button">Editar Categoria<span class="glyphicon glyphicon glyphicon-remove"></div>
 	  	</div>
 
 	  	<button class="w3-button w3-block w3-left-align" id="agregarEditorial">
@@ -49,7 +49,7 @@ session_start();
 	  	</button>
 	  	<div id="demoAcc3" class="w3-hide w3-white w3-card-2">
 	  	  <div class="agregarEditorial w3-bar-item w3-button">Agregar Editorial <span class="glyphicon glyphicon glyphicon-plus"></span></div>
-	      <div href="#" class="w3-bar-item w3-button">Eliminar Editorial<span class="glyphicon glyphicon glyphicon-remove"></div>
+	      <div class="eliminarEditorial w3-bar-item w3-button">Eliminar Editorial<span class="glyphicon glyphicon glyphicon-remove"></div>
 	  	</div>
      
      	<button class="w3-button w3-block w3-left-align" id="agregarLibro">
@@ -57,8 +57,8 @@ session_start();
 	  	</button>
 	  	<div id="demoAcc4" class="w3-hide w3-white w3-card-2">
 	  	  <div class="addBook w3-bar-item w3-button">Agregar Libro<span class="glyphicon glyphicon glyphicon-plus"></span></div>
-	      <div href="#" class="w3-bar-item w3-button">Eliminar Libro <span class="glyphicon glyphicon glyphicon-remove"></span></div>
-	      <div href="#" class="w3-bar-item w3-button">Editar Libro <span class="glyphicon glyphicon glyphicon-pencil"></span></div>
+	      
+	      
 	  	</div>
 
 

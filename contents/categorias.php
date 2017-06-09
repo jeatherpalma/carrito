@@ -3,37 +3,58 @@
 <div class="container">
 	<?php
 		session_start(); 
-		$categoria = utf8_decode($_GET['categoria']);
-		require_once '../filePhp/loginDatabase.php';
-       	$sql = "SELECT idCategoria FROM categorias where Tipo = '$categoria'";
-       	$resultado = $conn->query($sql);
-       	if($resultado->num_rows>0){
-       		$row=$resultado->fetch_assoc();
-       		$idCategoria = $row['idCategoria'];
-       }
+		if(isset($_GET['categoria'])){
+			$categoria = utf8_decode($_GET['categoria']);
+			require_once '../filePhp/loginDatabase.php';
+	       	$sql = "SELECT idCategoria FROM categorias where Tipo = '$categoria'";
+	       	$resultado = $conn->query($sql);
+	       	if($resultado->num_rows>0){
+	       		$row=$resultado->fetch_assoc();
+	       		$idCategoria = $row['idCategoria'];
+	       }
+		}
 		
 	?>
   
   <div class="row">
-  	<h1><?php echo $categoria; ?></h1>
-    <div class="col-md-2">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-       <div class="container">
-      <div class="row center-block">
+  	<h1><?php if(isset($_GET['categoria'])){echo utf8_encode($categoria);} ?></h1>
+    
+       
+      
       <?php 
       require_once '../filePhp/loginDatabase.php';
-      $sql ="SELECT nombre,imagen,costo,l.idlibro FROM libro l,lcae s WHERE s.idcategoria = '$idCategoria' AND 
-      l.idlibro = s.idlibro";
+      if(isset($_POST['str'])){
+      	$str =  $_POST['str'];
+      	if($str==""){
+      		$str = "33308/fhkfhf";
+      	}
+      	$sql = "SELECT nombre, imagen,costo,idlibro FROM libro WHERE nombre LIKE '$str%'";
+      }else{
+      	if(isset($_POST['promo'])){
+      		$promo = $_POST['promo'];
+      		if(isset($_POST['nuevos'])){
+      			$sql = "SELECT nombre, imagen,costo,idlibro FROM libro WHERE costo >= '$promo'";
+      		}else{
+				$sql = "SELECT nombre, imagen,costo,idlibro FROM libro WHERE costo <= '$promo'";
+      		}
+      		
+      	}else{
+      		$sql ="SELECT nombre,imagen,costo,l.idlibro FROM libro l,lcae s WHERE s.idcategoria = '$idCategoria' AND 
+      		l.idlibro = s.idlibro";
+      	}
+      		
+      }
+      
       $resultado = $conn->query($sql);
       if($resultado->num_rows>0){
        	while ($row=$resultado->fetch_assoc()) {
        	?>	
 
-				<div class="w3-container col-xs-12 col-sm-6 col-md-4 center-block">
-					  <h2 class="name" ><?php echo utf8_encode($row['nombre']); ?></h2>
+				<div class="w3-container  col-xs-12 col-sm-6 col-md-4 text-center">
+					  <h3 class="name" ><?php echo utf8_encode($row['nombre']); ?></h3>
 
-						  <div class="w3-card-4">
-						    <img class="imgCat" src="<?php echo $row['imagen']; ?>" style="width:100%">
+						  <div class="w3-card-4 center-block">
+						    <img class="imagenDescripcion" src="<?php echo $row['imagen']; ?>" name="<?php echo $row['idlibro']; ?>">
 						    <div class="w3-container">
 						    	<div class="row">
 						    		<div class="col-md-4 ">
@@ -54,12 +75,11 @@
 
 	   <?php
          }
+       }else{
+     ?>
+     <h2>No se hayaron resultados</h2>
+     <?php  	
        }
 
 	?>
-      
-</div>
-</div>
-    </div>
-  </div>
 </div>

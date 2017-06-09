@@ -1,11 +1,16 @@
 $(document).ready(function() {
 	$("#barraNavegacion").load("http://localhost/carrito/contents/barraNavegacion2.php");
 	$("#piePagina").load("http://localhost/carrito/contents/footerPag.php");
-	$("#contenido").load("http://localhost/carrito/contents/contenedorTerror.php");
 	$("#ca2").load("http://localhost/carrito/contents/carrusel.php");
 	$("#contenidoPrincipal").load("http://localhost/carrito/contents/paginaPrincipal.php");
 	
+	$('#contenidoPrincipal').on('click','#promociones',function(){
+		$("#contenidoPrincipal").load("http://localhost/carrito/contents/categorias.php",{'promo':200})
+	})
 
+	$('#contenidoPrincipal').on('click','#nuevosLibros',function(){
+		$("#contenidoPrincipal").load("http://localhost/carrito/contents/categorias.php",{'promo':400,'nuevos':true})
+	})
 
 	$("#barraNavegacion").on("click", "#linkRegistrar", function(){
         $("#modalRegistro").load('http://localhost/carrito/contents/formularioregistro.php');
@@ -19,18 +24,21 @@ $(document).ready(function() {
 		
 		var categoria = $(this).html();
 		$("#contenidoPrincipal").load("http://localhost/carrito/contents/categorias.php?categoria="+categoria+"");
+		$('#barraNavegacion').collapse('hide')
+		$('.navbar-collapse').collapse('hide');
 	});
 
 	$("#barraNavegacion").on("click","#verCarrito",function(){
 		$("#contenidoPrincipal").load("http://localhost/carrito/contents/verCarrito.php");
+		$('.navbar-collapse').collapse('hide');
 	});
 	$("#contenidoPrincipal").on("click",'.removeProduct',function(){
 		var nombre = $(this).attr("id");
 		var parametros = {
 			"nombre": nombre
 		};
-		var url = "http://localhost/carrito/filePhp/removeAllProduct.php";
-		addCarrito(parametros,url);
+		var urlink = "http://localhost/carrito/filePhp/removeAllProduct.php";
+		addCarrito(parametros,urlink);
 		$("#contenidoPrincipal").load("http://localhost/carrito/contents/verCarrito.php");
 		$("#barraNavegacion").load("http://localhost/carrito/contents/barraNavegacion2.php");
 	});
@@ -50,8 +58,8 @@ $(document).ready(function() {
 		addCarrito(parametros,urlFile);
 		$("#barraNavegacion").load("http://localhost/carrito/contents/barraNavegacion2.php");
 		var actividad = "Agregar carrito";
-		var urlimagen = $(".imgCat").attr('src')
-        $( "#modalRegistro" ).load( "http://localhost/carrito/contents/modalAlert.php",{'actividad':actividad,'imagen':urlimagen});
+
+        $( "#modalRegistro" ).load( "http://localhost/carrito/contents/modalAlert.php",{'actividad':actividad,'idlibro':idlibro});
         $("#modalRegistro").modal()
 
 		
@@ -70,7 +78,7 @@ $(document).ready(function() {
 			"us":user,
 			"pss":pass
 		};
-		var url = "http://localhost/carrito/contents/inicioSesion.php";
+		var url = "http://localhost/carrito/filePhp/inicioSesion.php";
 		addCarrito(parametros,url);
 		if(login){
 			$("#modalLogin").modal('hide')
@@ -116,6 +124,7 @@ $(document).ready(function() {
 			if(login){
 				var actividad = "Registro";
         		$( "#modalRegistro" ).load( "http://localhost/carrito/contents/modalAlert.php",{'actividad':actividad});
+        		$('.navbar-collapse').collapse('hide');
 			}else{
 				document.getElementById("contrasena").value = "";
 				document.getElementById("contrasena2").value = "";
@@ -139,8 +148,22 @@ $(document).ready(function() {
 		var url = "http://localhost/carrito/contents/loggout.php";
 		addCarrito(parametros,url);
 		$("#barraNavegacion").load("http://localhost/carrito/contents/barraNavegacion2.php");
+		$('.navbar-collapse').collapse('hide');
 		login = false;
 	});
+
+	//Eveneto del buscador
+	$("#barraNavegacion").on("click","#searchBook",function(){
+		var str = $('#busquedaLibro').val()
+		$("#contenidoPrincipal").load("http://localhost/carrito/contents/categorias.php",{'str':str})
+		document.getElementById("busquedaLibro").value = "";
+		$('.navbar-collapse').collapse('hide');
+	})
+
+	//Evento acerca de
+	$("#barraNavegacion").on("click","#acercade",function(){
+		$("#contenidoPrincipal").load("http://localhost/carrito/contents/acercade.php")
+	})
 
 	//Función que ejecuta los php
 	function addCarrito (parametros,url) {
@@ -167,8 +190,9 @@ $(document).ready(function() {
 
 	
 	//Ver más imagen
-	$("#contenidoPrincipal").on("click",".imgCat",function(){
-		var idlibro = $(".agregarCarrito").attr("id");
+	$("#contenidoPrincipal").on("click",".imagenDescripcion",function(){
+		var idlibro = $(this).attr("name");
+		alert(idlibro)
 		$("#modalDescripcion").load("http://localhost/carrito/contents/descripcionProducto.php",{"idlibro":idlibro});
 		$("#modalDescripcion").modal();
 	});

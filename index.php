@@ -24,9 +24,9 @@
     
   </div>
 
-     <footer id="piePagina">
+     <div id="piePagina">
       
-     </footer>
+     </div>
    
     
   </body>

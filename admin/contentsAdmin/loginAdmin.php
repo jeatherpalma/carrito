@@ -28,7 +28,12 @@
 	              <div class="col-md-4 col-md-offset-4">
 	              	<button id="botonLogin" class="btn btn-success form-control">Login</button>
 	              </div>
+	              <div class="col-md-4 col-lg-offset-4">
+             	<span id="labelError"></span>
+             </div>
 	            </div>
              </div>
+
+             
       
 	</div>
